@@ -1,6 +1,6 @@
 # Odin Recipes
 
-Este é um projeto feito como parte do [The Odin Project](https://www.theodinproject.com/), para praticar HTML básico. Conforme meu conhecimento sobre desenvolvimento aumenta esse projeto se tornará mais complexo. 
+Este é um projeto feito como parte do [The Odin Project](https://www.theodinproject.com/), para praticar HTML e CSS básico. Conforme meu conhecimento sobre desenvolvimento aumenta esse projeto se tornará mais complexo. 
 
 ## Objetivo
 
