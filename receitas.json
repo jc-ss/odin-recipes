@@ -1,0 +1,30 @@
+{
+  "receitas": [
+    {
+      "id": 1,
+      "titulo": "Lasanha",
+      "imagem": "images/lasanha.jpg",
+      "ingredientes": [
+        "Massa para lasanha",
+        "Molho de tomate",
+        "Carne moída",
+        "Queijo mussarela",
+        "Presunto"
+      ],
+      "preparo": "Monte as camadas com os ingredientes e leve ao forno pré-aquecido a 200ºC por 30 minutos."
+    },
+    {
+      "id": 2,
+      "titulo": "Arroz de Carreteiro",
+      "imagem": "images/carreteiro.jpg",
+      "ingredientes": [
+        "Arroz",
+        "Charque dessalgado",
+        "Cebola",
+        "Alho",
+        "Pimentão"
+      ],
+      "preparo": "Refogue os ingredientes e adicione o arroz. Cozinhe tudo junto até o arroz estar pronto."
+    }
+  ]
+}
