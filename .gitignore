@@ -1,0 +1,14 @@
+# Arquivos HTML gerados automaticamente
+recipes/receita-*.html
+
+# Arquivos temporários do Node.js
+node_modules/
+*.log
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+.env
+.env.local
