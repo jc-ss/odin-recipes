@@ -1,5 +1,5 @@
 # Arquivos HTML gerados automaticamente
-recipes/receita-*.html
+recipes/
 
 # Arquivos temporários do Node.js
 node_modules/
