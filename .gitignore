@@ -1,5 +1,6 @@
-# Arquivos HTML gerados automaticamente
-recipes/
+# Ignora apenas arquivos específicos dentro de recipes/
+recipes/carreteiro.html
+recipes/lasagna.html
 
 # Arquivos temporários do Node.js
 node_modules/
