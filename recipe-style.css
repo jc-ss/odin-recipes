@@ -1,0 +1,260 @@
+/* Removendo padrões do navegador, reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header simples mas suficiente pro projeto. Efeito vidro */
+.header {
+    background: rgba(255, 255, 255, 0.15);
+    /* Desfoca o que está atrás */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/*Botão de voltar */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Efeito de voltar quando o usuário passa o mouse */
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+.back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+}
+
+/* Container principal */
+.recipe-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Card principal da receita */
+.recipe-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Título da receita */
+.recipe-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+/* Imagem da receita */
+.recipe-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Conteúdo da receita */
+.recipe-content {
+    padding: 3rem;
+}
+
+/* Seções (ingredientes, preparo) */
+.recipe-section {
+    margin-bottom: 3rem;
+}
+
+.recipe-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border-radius: 2px;
+}
+
+/* Lista de ingredientes */
+.ingredients-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.ingredients-list li {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efeito do ingrediente quando o usuário passa o mouse */
+.ingredients-list li:hover {
+    background: rgba(102, 126, 234, 0.15);
+    /* Move o objeto um numero de pixels para a direita no eixo X */
+    transform: translateX(5px);
+}
+
+.ingredients-list li::before {
+    content: '•';
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Modo de preparo */
+.preparation-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    position: relative;
+}
+
+.preparation-text::before {
+    content: '👩‍🍳';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: white;
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Botão de voltar no final */
+.bottom-back {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.bottom-back .back-link {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .recipe-container {
+        padding: 2rem 1rem;
+    }
+
+    .recipe-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .recipe-image {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .ingredients-list {
+        gap: 0.75rem;
+    }
+
+    .ingredients-list li {
+        padding: 0.75rem 1rem;
+    }
+
+    .preparation-text {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Animações: quando a página carrega, as seções sobem com escalonamento*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recipe-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.recipe-section {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+/* Escalonamento das animações */
+.recipe-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.recipe-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.recipe-section:nth-child(3) {
+    animation-delay: 0.3s;
+}

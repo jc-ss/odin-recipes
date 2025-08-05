@@ -6,22 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Odin Recipes</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Adiciona fonte Inter do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="topo">
     <div class="logo">Odin Recipes</div>
     <form class="busca">
-      <input type="text" placeholder="Buscar receita...">
+      <input type="text" placeholder="Buscar receita ou ingrediente...">
       <button type="submit">🔍</button>
     </form>
   </header>
-  <!-- Em vez de h1 usei div class pra definir o titulo como um tipo,
-  assim modifico o formato direto no CSS sem estilizar todos os h1-->
-  <div class="titulo">Bem-vindo ao Odin Recipes</div>
-  <div class="titulomenor">Lista de receitas:</div>
-  
-  <div id="lista-receitas" class="grid-receitas"></div>
+
+  <div class="container">
+    <div class="titulo">Deliciosas Receitas</div>
+    <div class="titulomenor">Encontre pratos incríveis para qualquer ocasião</div>
+    
+    <div id="lista-receitas" class="grid-receitas"></div>
+  </div>
 
   <p>Projeto feito como parte do The Odin Project.</p>
 
